@@ -47,16 +47,16 @@
       <file leaf-file-name="tarot-component2.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tarot-component2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1002">
-              <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+            <state relative-caret-position="227">
+              <caret line="95" column="44" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="44" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
-                <marker date="1504798257000" expanded="true" signature="72:427" ph="..." />
-                <marker date="1504798257000" expanded="true" signature="72:519" ph="..." />
-                <marker date="1504798257000" expanded="true" signature="84:341" ph="..." />
-                <marker date="1504798257000" expanded="true" signature="98:246" ph="{...}" />
-                <marker date="1504798257000" expanded="true" signature="256:286" ph="{...}" />
-                <marker date="1504798257000" expanded="true" signature="297:329" ph="{...}" />
+                <marker date="1504800535000" expanded="true" signature="72:427" ph="..." />
+                <marker date="1504800535000" expanded="true" signature="72:519" ph="..." />
+                <marker date="1504800535000" expanded="true" signature="84:341" ph="..." />
+                <marker date="1504800535000" expanded="true" signature="98:246" ph="{...}" />
+                <marker date="1504800535000" expanded="true" signature="256:286" ph="{...}" />
+                <marker date="1504800535000" expanded="true" signature="297:329" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -76,8 +76,8 @@
       <list>
         <option value="$PROJECT_DIR$/tarot-component.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/tarot-component2.js" />
         <option value="$PROJECT_DIR$/styles.css" />
+        <option value="$PROJECT_DIR$/tarot-component2.js" />
       </list>
     </option>
   </component>
@@ -219,7 +219,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18978000" />
+    <option name="totallyTimeSpent" value="20241000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="23" width="1300" height="828" extended-state="0" />
@@ -284,16 +284,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tarot-component2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1002">
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+        <state relative-caret-position="385">
+          <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
-            <marker date="1504798257000" expanded="true" signature="72:427" ph="..." />
-            <marker date="1504798257000" expanded="true" signature="72:519" ph="..." />
-            <marker date="1504798257000" expanded="true" signature="84:341" ph="..." />
-            <marker date="1504798257000" expanded="true" signature="98:246" ph="{...}" />
-            <marker date="1504798257000" expanded="true" signature="256:286" ph="{...}" />
-            <marker date="1504798257000" expanded="true" signature="297:329" ph="{...}" />
+            <marker date="1504800535000" expanded="true" signature="72:427" ph="..." />
+            <marker date="1504800535000" expanded="true" signature="72:519" ph="..." />
+            <marker date="1504800535000" expanded="true" signature="84:341" ph="..." />
+            <marker date="1504800535000" expanded="true" signature="98:246" ph="{...}" />
+            <marker date="1504800535000" expanded="true" signature="256:286" ph="{...}" />
+            <marker date="1504800535000" expanded="true" signature="297:329" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tarot-component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <marker date="1504757409000" expanded="true" signature="29:46" ph="..." />
+            <marker date="1504757409000" expanded="true" signature="29:122" ph="..." />
+            <marker date="1504757409000" expanded="true" signature="29:153" ph="..." />
+            <marker date="1504757409000" expanded="true" signature="1598:1770" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tarot-component2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="95" column="44" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+            <marker date="1504800535000" expanded="true" signature="72:427" ph="..." />
+            <marker date="1504800535000" expanded="true" signature="72:519" ph="..." />
+            <marker date="1504800535000" expanded="true" signature="84:341" ph="..." />
+            <marker date="1504800535000" expanded="true" signature="98:246" ph="{...}" />
+            <marker date="1504800535000" expanded="true" signature="256:286" ph="{...}" />
+            <marker date="1504800535000" expanded="true" signature="297:329" ph="{...}" />
           </folding>
         </state>
       </provider>

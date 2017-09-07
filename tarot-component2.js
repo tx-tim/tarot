@@ -43,6 +43,7 @@ class BdTarot extends HTMLElement {
     }
 
     set imageurl(url) {
+        console.log('changing imageurl to', url);
         if(url) {
             this._imageurl = url;
             this.setAttribute('imageurl', url)
@@ -90,17 +91,30 @@ class BdTarot extends HTMLElement {
 
     }
 
-    attachImage() {
-        console.log('attaching image')
-        this.imgNode.src = this.imageurl;
-        this.imgNode.setAttribute('src', this.imageurl);
-    }
-
     attributeChangedCallback() {
         if(this.imgNode) {
-            this.attachImage();
+            var newnode = this.imgNode.cloneNode(true);
+            this.removeImage();
+            this.attachImage(newnode);
         }
+    }
 
+    attachImage(newnode) {
+        console.log('attaching image')
+        if(this.imgNode) {
+            console.log("yep");
+        } else {
+            console.log("nope")
+        }
+        console.log(this.imageurl);
+        newnode.src = this.imageurl;
+        newnode.setAttribute('src', this._imageurl);
+        this._shadowRoot.appendChild(newnode);
+    }
+
+    removeImage() {
+        var inode = this._shadowRoot.querySelector('img');
+        this._shadowRoot.removeChild(inode);
     }
 }
 
