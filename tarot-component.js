@@ -1,29 +1,35 @@
 var tmpl = `
-<template id="tmpl">
     <style>
-      :host {
+    :host {
+        background: black;
+        color: white;
         border: 1px solid black;
         display: block;
-        height: 18.75rem;
+        height: 29rem;
+        margin: auto;
+        position: relative;
+        width: 15.625rem;
+    }
+    .tarot-container {
+        display: block;
+        height: 25rem;
         position: relative;
         text-align: center;
-      }
-      h1 {
-        color: blue;
-      }
-      img { 
-        height: 100%;
-      }
+    }
+    img { 
+        height: 80%;
+    }
     </style>
-    <h1 class="tarot-title">
-        <slot name="title">NEED TITLE</slot>
-    </h1>
-    <img src="${this.imageurl}" alt="">
-    <p>
-        <slot name="subtitle">NEED A SUBTITLE</slot>
-    </p>
-</template>`;
-
+    <div class="tarot-container">
+        <h1 class="tarot-title">
+            <slot name="title">NEED TITLE</slot>
+        </h1>
+        <img src="${this.imageurl}" alt="">
+        <p>
+            <slot name="subtitle">NEED A SUBTITLE</slot>
+        </p>
+    </div>
+    `;
 class BdTarot extends HTMLElement {
     static get observedAttributes() {
         return ['imageurl'];
@@ -52,8 +58,8 @@ class BdTarot extends HTMLElement {
 
     connectedCallback() {
         this._shadowRoot.innerHTML = tmpl;
-        var _tmpl = this._shadowRoot.querySelector('#tmpl');
-        this._shadowRoot.appendChild(_tmpl.content.cloneNode(true));
+        // var _tmpl = this._shadowRoot.querySelector('#tmpl');
+        // this._shadowRoot.appendChild(_tmpl.content.cloneNode(true));
 
         this.imgNode = this._shadowRoot.querySelector('img');
         this._imageurl = this.getAttribute('imageurl');
