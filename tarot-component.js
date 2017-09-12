@@ -58,9 +58,6 @@ class BdTarot extends HTMLElement {
 
     connectedCallback() {
         this._shadowRoot.innerHTML = tmpl;
-        // var _tmpl = this._shadowRoot.querySelector('#tmpl');
-        // this._shadowRoot.appendChild(_tmpl.content.cloneNode(true));
-
         this.imgNode = this._shadowRoot.querySelector('img');
         this._imageurl = this.getAttribute('imageurl');
         this.imageurl = this._imageurl;
