@@ -1,19 +1,46 @@
-var y = `
-<template id="tmpl">
-    <h1>title: ${this.title}</h1>
-    <img src="${this.imageurl}" alt="">
-    <p>subtitle: ${this.subtitle}</p>
-</template>`;
-
+var tmpl = `
+    <style>
+    :host {
+        background: black;
+        color: white;
+        border: 1px solid black;
+        display: block;
+        height: 29rem;
+        margin: auto;
+        position: relative;
+        width: 15.625rem;
+    }
+    .tarot-container {
+        display: block;
+        height: 25rem;
+        position: relative;
+        text-align: center;
+    }
+    img { 
+        height: 80%;
+    }
+    </style>
+    <div class="tarot-container">
+        <h1 class="tarot-title">
+            <slot name="title">NEED TITLE</slot>
+        </h1>
+        <img src="${this.imageurl}" alt="">
+        <p>
+            <slot name="subtitle">NEED A SUBTITLE</slot>
+        </p>
+    </div>
+    `;
 class BdTarot extends HTMLElement {
     static get observedAttributes() {
         return ['imageurl'];
     }
-    constructor() {
+
+    constructor(props = {_imageurl:  ""}) {
         super();
-        this._imageurl;
-        this._title;
-        this._subtitle;
+        this._shadowRoot = this.attachShadow({
+            mode: 'open'
+        });
+        this._imageurl = props._imageurl;
     }
 
     get imageurl() {
@@ -29,56 +56,30 @@ class BdTarot extends HTMLElement {
         }
     }
 
-    get title() {
-        return this._title;
-    }
-
-    set title(val) {
-        if(val) {
-            this._title = val;
-            this.setAttribute('title', val);
-        } else {
-            this.removeAttribute('title');
-            console.log('title removed')
-        }
-    }
-
-    get subtitle() {
-        return this._subtitle;
-    }
-
-    set subtitle(val) {
-        if(val) {
-            this._subtitle = val;
-            this.setAttribute('subtitle', val);
-        } else {
-            this.removeAttribute('subtitle');
-            console.log('subtitle removed')
-        }
-    }
-
     connectedCallback() {
+        this._shadowRoot.innerHTML = tmpl;
+        // var _tmpl = this._shadowRoot.querySelector('#tmpl');
+        // this._shadowRoot.appendChild(_tmpl.content.cloneNode(true));
+
+        this.imgNode = this._shadowRoot.querySelector('img');
         this._imageurl = this.getAttribute('imageurl');
         this.imageurl = this._imageurl;
 
-        this._title = this.getAttribute('title');
-        this.title = this._title;
+        this.attachImage()
 
-        this._subtitle = this.getAttribute('subtitle');
-        this.subtitle = this._subtitle;
-
-        this.innerHTML = `
-            <template id="tmpl">
-                <h1>title: ${this.title}</h1>
-                <img src="${this.imageurl}" alt="">
-                <p>subtitle: ${this.subtitle}</p>
-            </template>`;
-        var _tmpl = this.querySelector('#tmpl');
-        this.appendChild(_tmpl.content.cloneNode(true));
     }
 
-    attributeChangedCallback() {
-        
+    attributeChangedCallback(prop, oldval, newval) {
+        if (oldval !== newval) {
+            this.attachImage();
+        }
+    }
+
+    attachImage() {
+        if(this.imgNode) {
+            this.imgNode.src = this.imageurl;
+            this.imgNode.setAttribute('src', this.imageurl);
+        }
     }
 }
 
