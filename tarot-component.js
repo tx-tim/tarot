@@ -61,9 +61,7 @@ class BdTarot extends HTMLElement {
         this.imgNode = this._shadowRoot.querySelector('img');
         this._imageurl = this.getAttribute('imageurl');
         this.imageurl = this._imageurl;
-
         this.attachImage()
-
     }
 
     attributeChangedCallback(prop, oldval, newval) {
