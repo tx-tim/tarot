@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "http-server": "^0.10.0"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   }
 }

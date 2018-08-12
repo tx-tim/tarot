@@ -1,0 +1,13 @@
+1. background image for container
+2. deal 3 cards at random from full 78 card deck (wands, cups, swords, pentacles)
+    - configure a data structure representing the deck to pull cards from
+    - algorithm to shuffle deck
+    - algorithm to pull 3 cards at random
+3. display the cards shown
+4. create the concept of a "spread" and choose amongst different spreads
+
+
+choose spread 
+shuffle deck
+deal cards
+accessibility options - jump to deal cards choose spread
