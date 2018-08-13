@@ -10,12 +10,11 @@ import { TarotDeck } from './deck.js';
 
   window.onload = function()
     {
-        class Greetings extends React.Component
+        class Card extends React.Component
         {
             render()
             {
-                //return React.createElement('h1', null, 'Greetings, ' + this.props.name + '!');
-                return React.createElement('h1', null, 'Greetingz, ' + this.props.name + '!');
+                return React.createElement('div', null, `card: ${this.props.name}`);
             }
         }
 
@@ -27,18 +26,15 @@ import { TarotDeck } from './deck.js';
                 var shuffledDeck = deck.shuffle();
                 var hand = [];
                 hand = deck.deal(shuffledDeck, 3);
-                console.log(hand);
-                return React.createElement('div', null, `
-                    
-                `);
+                return hand.map((item) => {
+                    return React.createElement(Card, {name : item.name })
+                });
             }
         }
         ReactDOM.render(
             React.createElement('div', null, 
-            React.createElement(Greetings, { name : 'Chris' }),
-            React.createElement(Greetings, { name : 'George' }),
-            React.createElement(Spread),
-        ),
+                React.createElement(Spread),
+            ),
             document.getElementById('tarotApp')
         );
     };

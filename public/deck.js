@@ -24,18 +24,16 @@ class TarotDeck {
             draw.push(this.selectUniqueRandom(shuffledDeck, draw));
             i++;
         }
-
         return draw;
     }
 
     selectUniqueRandom(deck, hand) {
-
-
-            let index = Math.floor(Math.random() * 78);
-
+        let index = Math.floor(Math.random() * 78);
+        if(hand.find((item) => item === deck[index])) {
+            return this.selectUniqueRandom(deck, hand);
+        } else {
             return deck[index];
-
-        
+        }
     }
 }
 //wands cups swords pentacles
