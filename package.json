@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "http-server": "^0.10.0"
+    "http-server": "^0.10.0",
+    "standard": "^11.0.1"
   },
   "dependencies": {
     "react": "^16.4.2",
