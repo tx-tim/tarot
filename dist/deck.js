@@ -1,19 +1,19 @@
 class TarotDeck {
   shuffle () {
-    var shuffledDeck = orderedTarotCards.slice(0)
-    var m = shuffledDeck.length
-    var t
-    var i
+    var shuffledDeck = orderedTarotCards.slice(0);
+    var m = shuffledDeck.length;
+    var t;
+    var i;
 
     // While there remain elements to shuffle…
     while (m) {
       // Pick a remaining element…
-      i = Math.floor(Math.random() * m--)
+      i = Math.floor(Math.random() * m--);
 
       // And swap it with the current element.
-      t = shuffledDeck[m]
-      shuffledDeck[m] = shuffledDeck[i]
-      shuffledDeck[i] = t
+      t = shuffledDeck[m];
+      shuffledDeck[m] = shuffledDeck[i];
+      shuffledDeck[i] = t;
     }
 
     return shuffledDeck
@@ -21,18 +21,18 @@ class TarotDeck {
 
   deal (shuffledDeck, numberOfCards) {
     // identify [numberOfCards] unique cards (indexes) from the provided array
-    var i = 0
-    var draw = []
+    var i = 0;
+    var draw = [];
 
     while (i < numberOfCards) {
-      draw.push(this.selectUniqueRandom(shuffledDeck, draw))
-      i++
+      draw.push(this.selectUniqueRandom(shuffledDeck, draw));
+      i++;
     }
     return draw
   }
 
   selectUniqueRandom (deck, hand) {
-    let index = Math.floor(Math.random() * 78)
+    let index = Math.floor(Math.random() * 78);
     if (hand.find((item) => item === deck[index])) {
       return this.selectUniqueRandom(deck, hand)
     } else {
@@ -120,6 +120,6 @@ const orderedTarotCards = [
   {n: 75, name: 'Knight of Pentacles', image: './images/magician.jpg'},
   {n: 76, name: 'Queen of Pentacles', image: './images/magician.jpg'},
   {n: 77, name: 'King of Pentacles', image: './images/magician.jpg'}
-]
+];
 
-export { TarotDeck }
+export { TarotDeck };
